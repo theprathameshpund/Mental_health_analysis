@@ -23,11 +23,13 @@ The model (`mental_health_best_model.joblib`) is trained on relevant features to
 ---
 
 ## 📂 Project Structure
+```bash
 Mental-Health-Prediction/
 │── app.py # Streamlit app
 │── mental_health_best_model.joblib # Pre-trained ML model
 │── requirements.txt # Required Python libraries
 │── README.md # Project documentation
+```
 
 
 ---
