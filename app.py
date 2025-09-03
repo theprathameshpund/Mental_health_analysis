@@ -3,6 +3,11 @@ import joblib
 import re
 import string
 
+
+# -----------------------
+# Streamlit UI
+# -----------------------
+st.set_page_config(page_title="Mental Health Prediction", layout="centered")
 # -----------------------
 # Define the preprocessing function used in training
 # -----------------------
@@ -27,10 +32,6 @@ def load_model():
 
 model = load_model()
 
-# -----------------------
-# Streamlit UI
-# -----------------------
-st.set_page_config(page_title="Mental Health Prediction", layout="centered")
 
 st.title("🧠 Mental Health Prediction App")
 st.write("Enter your thoughts below and the model will try to predict the hidden emotion.")
