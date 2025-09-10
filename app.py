@@ -53,7 +53,7 @@ class_colors = {
 # -----------------------
 # Streamlit UI
 # -----------------------
-st.title("🧠 Mental Health Prediction App (Balanced Model)")
+st.title("🧠 Mental Health Prediction App")
 st.write("Enter your thoughts below and the model will predict the hidden emotion.")
 
 user_input = st.text_area("Your thoughts:", height=150)
