@@ -6,12 +6,25 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # -----------------------
-# Streamlit UI
+# Streamlit Page Config
 # -----------------------
 st.set_page_config(page_title="Mental Health Prediction", layout="centered")
 
 # -----------------------
-# Define the preprocessing function used in training
+# Add Open Graph / Twitter meta tags for LinkedIn preview
+# -----------------------
+st.markdown("""
+    <head>
+        <meta property="og:title" content="🧠 Mental Health Prediction Tool" />
+        <meta property="og:description" content="Enter your thoughts and get instant predictions on hidden emotions like Stress, Anxiety, Depression, and more using AI." />
+        <meta property="og:image" content="https://raw.githubusercontent.com/theprathameshpund/Mental_health_analysis/main/preview.png" />
+        <meta property="og:url" content="https://mentalhealth-analysis.streamlit.app/" />
+        <meta name="twitter:card" content="summary_large_image" />
+    </head>
+""", unsafe_allow_html=True)
+
+# -----------------------
+# Preprocessing function
 # -----------------------
 def simple_clean(text):
     text = text.lower()
@@ -38,7 +51,7 @@ def load_model():
 model = load_model()
 
 # -----------------------
-# Define colors for classes
+# Colors for classes
 # -----------------------
 class_colors = {
     "Normal": "#2ecc71",  # green
